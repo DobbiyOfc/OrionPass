@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VaultSafe Password Manager</title>
+    
+    <style>
+      /* Set the size for the popup window */
+      html, body {
+        width: 400px;
+        height: 600px;
+        overflow: hidden;
+      }
+    </style>
+
+    <!-- Theme color CSS variables -->
+    <style>
+      :root { /* Light Theme */
+        --background: 220 20% 98%;
+        --panel-hsl: 0 0% 100%;
+        --border-color-hsl: 220 13% 91%;
+        --text-primary: 220 15% 20%;
+        --text-secondary: 220 9% 46%;
+        --accent-start-hsl: 221 83% 53%; /* blue-500 */
+        --accent-end-hsl: 283 83% 53%; /* fuchsia-500 */
+        /* Light Aurora Colors - more vibrant */
+        --aurora-1: hsla(256, 96%, 88%, 0.5);
+        --aurora-2: hsla(300, 70%, 90%, 0.45);
+        --aurora-3: hsla(220, 90%, 90%, 0.5);
+        --aurora-4: hsla(340, 80%, 92%, 0.45);
+        --aurora-5: hsla(190, 80%, 85%, 0.4);
+      }
+      html.dark { /* Vivid Purple Dark Theme */
+        --background: 255 30% 6%; /* Deep, dark purple */
+        --panel-hsl: 255 20% 12%; 
+        --border-color-hsl: 250 15% 35%;
+        --text-primary: 240 10% 95%;
+        --text-secondary: 240 5% 70%;
+        --accent-start-hsl: 259 81% 64%; /* violet-500 */
+        --accent-end-hsl: 288 76% 58%; /* fuchsia-600 */
+        /* Dark Aurora Colors - more vibrant & purple */
+        --aurora-1: hsla(260, 90%, 65%, 0.4);
+        --aurora-2: hsla(280, 85%, 60%, 0.35);
+        --aurora-3: hsla(240, 90%, 70%, 0.3);
+        --aurora-4: hsla(300, 80%, 65%, 0.35);
+        --aurora-5: hsla(270, 85%, 70%, 0.4);
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.539.0",
+    "@noble/hashes/": "https://esm.sh/@noble/hashes@^1.4.0/",
+    "i18next": "https://esm.sh/i18next@^23.13.0",
+    "react-i18next": "https://esm.sh/react-i18next@^15.0.0",
+    "i18next-browser-languagedetector": "https://esm.sh/i18next-browser-languagedetector@^8.0.0",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "@zxcvbn-ts/core": "https://esm.sh/@zxcvbn-ts/core@^3.0.4",
+    "@zxcvbn-ts/language-common": "https://esm.sh/zxcvbn-ts/language-common@^3.0.4"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

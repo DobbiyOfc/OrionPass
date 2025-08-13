@@ -1,0 +1,7 @@
+
+{
+  "name": "Orion Vault Password Manager (Open Source)",
+  "description": "A secure, open-source password manager using client-side encryption. Connects to a backend to sync your encrypted vault across devices. Your master password never leaves your device.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

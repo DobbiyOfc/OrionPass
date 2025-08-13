@@ -1,0 +1,44 @@
+
+{
+  "manifest_version": 3,
+  "name": "Orion Vault Password Manager",
+  "description": "A secure, open-source password manager using client-side encryption. Connects to a backend to sync your encrypted vault across devices. Your master password never leaves your device.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "icons": {
+    "48": "icons/icon.svg"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "idle"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content_script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [ "index.html", "icons/icon.svg" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; frame-ancestors 'self';"
+  }
+}

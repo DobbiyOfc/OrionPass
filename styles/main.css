@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* Custom scrollbar for the new theme */
+  ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+      background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+      @apply bg-border-color/20;
+      border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+       @apply bg-border-color/40;
+  }
+}
+
+@layer utilities {
+  .aurora-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: hsl(var(--background));
+    background-image: 
+      radial-gradient(at 27% 37%, var(--aurora-1) 0px, transparent 50%),
+      radial-gradient(at 97% 21%, var(--aurora-2) 0px, transparent 50%),
+      radial-gradient(at 52% 99%, var(--aurora-3) 0px, transparent 50%),
+      radial-gradient(at 10% 29%, var(--aurora-4) 0px, transparent 50%),
+      radial-gradient(at 97% 96%, var(--aurora-5) 0px, transparent 50%),
+      radial-gradient(at 33% 50%, var(--aurora-3) 0px, transparent 50%),
+      radial-gradient(at 79% 53%, var(--aurora-1) 0px, transparent 50%);
+    z-index: -10;
+    animation: aurora-animation 16s infinite linear;
+  }
+
+  @keyframes aurora-animation {
+      0% { background-position: 0% 50%, 50% 100%, 100% 0%, 0% 100%, 100% 50%, 50% 0%, 100% 0%; }
+      50% { background-position: 100% 50%, 0% 0%, 0% 100%, 100% 0%, 0% 50%, 100% 100%, 0% 0%; }
+      100% { background-position: 0% 50%, 50% 100%, 100% 0%, 0% 100%, 100% 50%, 50% 0%, 100% 0%; }
+  }
+
+  .accent-gradient {
+    @apply bg-gradient-to-r from-accent-start to-accent-end;
+  }
+
+  .accent-gradient-text {
+    @apply accent-gradient bg-clip-text text-transparent;
+  }
+}
