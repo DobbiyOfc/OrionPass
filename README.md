@@ -11,15 +11,19 @@ Orion Vault is a secure, open-source password manager designed with privacy and 
 ## 📸 Screenshots
 
 **Main View (Full Tab)**
+
 ![Main](readme_images/Main.png)
 
 **Extension Popup**
+
 ![Extension](readme_images/Extension.png)
 
 **Autofill Prompt**
+
 ![Auto](readme_images/Auto.png)
 
 **New Login Notification**
+
 ![New Login](readme_images/NewLogin.png)
 
 ---
