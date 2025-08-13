@@ -6,6 +6,25 @@ Orion Vault is a secure, open-source password manager designed with privacy and 
 
 **This project serves as a comprehensive, production-quality reference architecture for building secure browser extensions.**
 
+---
+
+## 📸 Screenshots
+
+**Main View (Full Tab)**
+![Main](readme_images/Main.png)
+
+**Extension Popup**
+![Extension](readme_images/Extension.png)
+
+**Autofill Prompt**
+![Auto](readme_images/Auto.png)
+
+**New Login Notification**
+![New Login](readme_images/NewLogin.png)
+
+---
+
+
 ## Philosophies
 
 -   **Zero-Knowledge:** Your data is your data. Your master password is used to derive an encryption key in your browser and is never stored or transmitted. We, the creators, have zero access to it.
